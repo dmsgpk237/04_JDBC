@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="selectEmp">
+        <!-- 벨류 -->
+        select
+        emp_id,
+        emp_name,
+        emp_no,
+        email,
+        phone,
+        dept_code,
+        job_code,
+        sal_level,
+        salary,
+        bonus,
+        manager_id,
+        hire_date,
+        ent_date,
+        ent_yn
+        from
+        employee
+    </entry>
+
+    <entry key="insertEmp">
+        insert into employee (
+        emp_id,
+        emp_name,
+        emp_no,
+        job_code,
+        sal_level,
+        salary
+        )
+        values (?,?,?,?,?,?)
+        <!-- 이 쿼리문을 사용하기 위해서는 key 값을 사용하면 된다. -->
+    </entry>
+
+    <entry key="updateEmp">
+        update employee
+        set job_code = ?
+        emp_name = ?
+        salary = ?
+        where emp_id = ?
+    </entry>
+
+    <entry key="deleteEmp">
+        delete
+        from employee
+        where emp_id = ?
+    </entry>
+</properties>
